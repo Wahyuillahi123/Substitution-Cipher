@@ -1,0 +1,527 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.nonaktif{
+    display: none !important;
+}
+.admin{
+    color: rgb(112, 149, 252);
+}
+.form .form{
+    opacity: 1;
+}
+body{
+    background-color: aqua;
+}
+
+/* hp */
+@media(max-width:720px){
+    .Navbar{
+        width: 100%;
+        height: 50px;
+        background: rgb(121, 82, 179);
+        position: fixed;
+        z-index: 999;
+    }
+    .span-btn{
+        background-color: #ccc;
+        width: 34px;
+        height: 29px;
+        position: absolute;
+        margin-top: 10px;
+        margin-left: 20px;
+        /* display: none !important; */
+    }
+    .span-btn span{
+        background-color: rgb(0, 0, 0);
+        width: 30px;
+        height: 7px;
+        margin: 2px;
+        display: block;
+    }
+    .menu{
+        width: 250px;
+        height: 100%;
+        background: rgba(8, 8, 8,0.8);
+        margin-top: 50px;
+        position: fixed;
+        color: salmon;
+        font-style:oblique;
+
+        left: -250px;
+    }
+    .menu.aktif{
+        /* left: 0; */
+        animation: Menu .3s forwards;
+    }
+    @keyframes Menu{
+        to{
+            left: 0;
+        }
+    }
+    .menu ul li{
+        margin: 20px;
+        list-style: none;
+        border-bottom: 2px solid #ccc;
+        cursor: pointer;
+    }
+    .menu ul li span{
+        color: rgb(98, 255, 177);
+    }
+    .menu ul li:hover{
+        background-color: rgba(255, 255, 255, 0.1);
+        color: white;
+    }
+    .menu ul a li img{
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+        box-shadow: rgb(22, 22, 22) 3px 3px 4px;
+    }
+    .Navbar .Logo{
+        position: absolute;
+        margin-top: 7px;
+        margin-left: 60px;
+        color: white;
+    }
+    .Navbar .Profile{
+        position: absolute;
+        margin-top:15px;
+        margin-left:40%;
+        list-style: none;
+        display:flex;
+        color: seashell;
+        text-align: right;
+    }
+    .Profile li:nth-child(1){
+        /* margin-left: 15px; */
+        cursor: pointer;
+        /* background-color: violet; */
+        width: 150px;
+    }
+    .Profile li:nth-child(2){
+        /* margin-left: 15px; */
+        cursor: pointer;
+        /* background-color: violet; */
+        width: 55px;
+    }
+    .Profile li:hover{
+        color: rgb(243, 184, 184);
+    }
+    .mt-30px{
+        margin-top: 30px;
+    }
+    .isi{
+        padding-top: 50px;
+        width: auto;
+        height: 100%;
+        background-color: aqua;
+    }
+    /* membuat lembar scroll */
+    .scroll{
+        display: block;
+        /* border: 1px solid #ccc; */
+        padding: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+        width: auto;
+        height: 100%;
+        overflow:auto;
+    }
+    .card{
+        margin: 20px;
+        transform: translate(0px,90px) ;
+        transition: .5s;
+        opacity: 0;
+    }
+    .card.muncul{
+        transform: translate(0px,0px);
+        opacity: 1;
+    }
+    .h80{
+        height: 250px;
+    }
+    /* profile orang */
+    .profiles{
+        width: 95%;
+        height: 300px;
+        background-color: #ccc;
+    }
+    .nama{
+        text-align: center;
+        margin-top:140px;
+        font-size: 40px;
+    }
+    .asal{
+        text-align: center;
+        margin-top:5px;
+        font-size: 20px;
+    }
+    .score{
+        margin: 30px 10px 10px 30px;
+        width: 80%;
+        height: 10px;
+        background-color: aliceblue;
+        border-radius: 5px;
+    }
+    .fitur{
+        width: 99%;
+        height: 200px;
+        background-color:white;
+        float: left;
+        border-radius: 10px;
+        padding: 10px;
+        margin-left:2px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        text-align: center;
+        color: #ccc;
+        cursor: pointer;
+    }
+    .logo{
+        font-size: 60px;
+        margin-top: 30px;
+    }
+    .textlog{
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .fitur:hover{
+        color: black;
+    }
+}
+
+/* ========================================================== */
+/* tab */
+@media (min-width: 768px) {
+    .Navbar{
+        width: 100%;
+        height: 50px;
+        background: rgb(121, 82, 179);
+        position: fixed;
+        z-index: 999;
+    }
+    .span-btn{
+        background-color: #ccc;
+        width: 34px;
+        height: 29px;
+        position: absolute;
+        margin-top: 10px;
+        margin-left: 20px;
+        display: none !important;
+    }
+    .span-btn span{
+        background-color: rgb(0, 0, 0);
+        width: 30px;
+        height: 7px;
+        margin: 2px;
+        display: block;
+    }
+    .menu{
+        width: 250px;
+        height: 100%;
+        background: rgb(70, 69, 69);
+        margin-top: 50px;
+        position: fixed;
+        color: salmon;
+        font-style:oblique;
+    }
+    .menu ul li{
+        margin: 20px;
+        list-style: none;
+        border-bottom: 2px solid #ccc;
+        cursor: pointer;
+    }
+    .menu ul li span{
+        color: rgb(98, 255, 177);
+    }
+    .menu ul li:hover{
+        background-color: rgba(255, 255, 255, 0.1);
+        color: white;
+    }
+    .menu ul a li img{
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+        box-shadow: rgb(22, 22, 22) 3px 3px 4px;
+    }
+    .Navbar .Logo{
+        position: absolute;
+        margin-top: 7px;
+        margin-left: 45px;
+        color: white;
+    }
+    .Navbar .Profile{
+        position: absolute;
+        margin-top:15px;
+        margin-left:70%;
+        list-style: none;
+        display:flex;
+        color: seashell;
+        text-align: right;
+    }
+    .Profile li:nth-child(1){
+        /* margin-left: 15px; */
+        cursor: pointer;
+        /* background-color: violet; */
+        width: 160px;
+    }
+    .Profile li:nth-child(2){
+        /* margin-left: 15px; */
+        cursor: pointer;
+        /* background-color: violet; */
+        width: 55px;
+    }
+    .Profile li:hover{
+        color: rgb(243, 184, 184);
+    }
+    .isi{
+        padding-top: 50px;
+        width: auto;
+        height: 100%;
+        background-color: aqua;
+        margin-left: 250px;
+    }
+    /* membuat lembar scroll */
+    .scroll{
+        display: block;
+        /* border: 1px solid #ccc; */
+        padding: 15px;
+        padding-left: 90px;
+        padding-right: 90px;
+        width: auto;
+        height: 100%;
+        overflow:auto;
+    }
+    .card{
+        margin: 20px;
+        transform: translate(0px,90px) ;
+        transition: .5s;
+        opacity: 0;
+    }
+    .card.muncul{
+        transform: translate(0px,0px);
+        opacity: 1;
+    }
+        /* profile orang */
+        .profiles{
+            width: 90%;
+            height: 300px;
+            background-color: #ccc;
+        }
+        .nama{
+            text-align: center;
+            margin-top:140px;
+            font-size: 40px;
+        }
+        .asal{
+            text-align: center;
+            margin-top:5px;
+            font-size: 20px;
+        }
+        .score{
+            margin: 30px 10px 10px 50px;
+            width: 80%;
+            height: 10px;
+            background-color: aliceblue;
+            border-radius: 5px;
+        }
+        .fitur{
+            width: 49.5%;
+            height: 200px;
+            background-color:white;
+            float: left;
+            border-radius: 10px;
+            padding: 10px;
+            margin-left:2px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            text-align: center;
+            color: #ccc;
+            cursor: pointer;
+        }
+        .logo{
+            font-size: 60px;
+            margin-top: 30px;
+        }
+        .textlog{
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .fitur:hover{
+            color: black;
+        }
+        .barcode{
+            width: 350px;
+        }
+}
+
+/* ========================================================== */
+/* leptop */
+@media (min-width: 1200px) {
+    .Navbar{
+        width: 100%;
+        height: 50px;
+        background: rgb(121, 82, 179);
+        position: fixed;
+        z-index: 999;
+    }
+    .span-btn{
+        background-color: #ccc;
+        width: 34px;
+        height: 29px;
+        position: absolute;
+        margin-top: 10px;
+        margin-left: 20px;
+        display: none !important;
+    }
+    .span-btn span{
+        background-color: rgb(0, 0, 0);
+        width: 30px;
+        height: 7px;
+        margin: 2px;
+        display: block;
+    }
+    .menu{
+        width: 250px;
+        height: 100%;
+        background: rgb(70, 69, 69);
+        margin-top: 50px;
+        position: fixed;
+        color: salmon;
+        font-style:oblique;
+    }
+    .menu ul li{
+        margin: 20px;
+        list-style: none;
+        border-bottom: 2px solid #ccc;
+        cursor: pointer;
+    }
+    .menu ul li span{
+        color: rgb(98, 255, 177);
+    }
+    .menu ul li:hover{
+        background-color: rgba(255, 255, 255, 0.1);
+        color: white;
+    }
+    .menu ul a li img{
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+        box-shadow: rgb(22, 22, 22) 3px 3px 4px;
+    }
+    .Navbar .Logo{
+        position: absolute;
+        margin-top: 7px;
+        margin-left: 45px;
+        color: white;
+    }
+    .Navbar .Profile{
+        position: absolute;
+        margin-top:15px;
+        margin-left:80%;
+        list-style: none;
+        display:flex;
+        color: seashell;
+        text-align: right;
+    }
+    .Profile li:nth-child(1){
+        /* margin-left: 15px; */
+        cursor: pointer;
+        /* background-color: violet; */
+        width: 200px;
+    }
+    .Profile li:nth-child(2){
+        /* margin-left: 15px; */
+        cursor: pointer;
+        /* background-color: violet; */
+        width: 55px;
+    }
+    .Profile li:hover{
+        color: rgb(243, 184, 184);
+    }
+    .isi{
+        padding-top: 50px;
+        width: auto;
+        height: 100%;
+        background-color: aqua;
+        margin-left: 250px;
+    }
+    /* membuat lembar scroll */
+    .scroll{
+        display: block;
+        /* border: 5px solid #ccc; */
+        padding: 15px;
+        padding-left: 65px;
+        width: auto;
+        height:100%;
+        overflow:auto;
+    }
+    .card{
+        margin: 20px;
+        transform: translate(0px,90px) ;
+        transition: .5s;
+        opacity: 0;
+    }
+    .card.muncul{
+        transform: translate(0px,0px);
+        opacity: 1;
+    }
+    /* profile orang */
+    .profiles{
+        width: 90%;
+        height: 300px;
+        background-color: #ccc;
+    }
+    .nama{
+        text-align: center;
+        margin-top:140px;
+        font-size: 40px;
+    }
+    .asal{
+        text-align: center;
+        margin-top:5px;
+        font-size: 20px;
+    }
+    .score{
+        margin: 30px 10px 10px 50px;
+        width: 90%;
+        height: 10px;
+        background-color: aliceblue;
+        border-radius: 5px;
+    }
+    .wel{
+        height:800px;
+    }
+    .fitur{
+        width: 24.8%;
+        height: 200px;
+        background-color:white;
+        float: left;
+        border-radius: 10px;
+        padding: 10px;
+        margin-left:2px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        text-align: center;
+        color: #ccc;
+        cursor: pointer;
+    }
+    .logo{
+        font-size: 60px;
+        margin-top: 30px;
+    }
+    .textlog{
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .fitur:hover{
+        color: black;
+    }
+    .barcode{
+        width: 350px;
+    }
+}

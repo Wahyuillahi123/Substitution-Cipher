@@ -1,0 +1,85 @@
+/* #misal {
+    background-color: red;
+    width: 1000px;
+    height: 500px;
+    margin: auto;
+}
+
+h1 {
+    color: blue;
+    font-size: 12px;
+}
+
+h2 {
+    color: yellow;
+    font-size: 14px;
+
+}
+
+    {
+    color: red;
+    font-size: 12px;
+}
+
+.container {
+    height: 1024px;
+} */
+
+/* table {
+    border: 1px solid black;
+    margin: 0.5em;
+    height: 100px;
+    width: 150px;
+}
+
+td {
+    border: 1px dashed black;
+} */
+
+/* .misal {
+
+    height: 100px;
+    width: 25px;
+    text-align: center;
+    padding-top: 1cm;
+}
+
+
+
+
+.belajar {
+    font-size: 20px;
+}
+
+.center {
+    height: 50px;
+    width: 50px;
+    float: center;
+}
+
+.p {
+    font-size: 20px;
+    color: red;
+} */
+
+/* .container {
+    background: rgb(30, 255, 0);
+    height: 50px;
+    width: 900px;
+
+} */
+
+.col-lg-2,
+.badge {
+    font-size: 16px;
+}
+
+.div {
+    border: 1pc solid seagreen;
+
+}
+
+h1,
+h2 {
+    size: 14px;
+}
