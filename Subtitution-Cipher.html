@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous" />
+
+    <title>Jasakumedia</title>
+  </head>
+  <body>
+    <div class="container-fluit">
+      <center>
+        <h3>Subtitution Cipher</h3>
+        <h6>enkripsi dengan mengubah urutan abjad</h6>
+      </center>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Jasakumedia</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false"> Rumus Lainnya </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="Shift-Cipher.html">Shift Cipher</a>
+                <a class="dropdown-item" href="Subtitution-Cipher.html">Subtitution Cipher</a>
+                <a class="dropdown-item" href="Subtitution-Rot13.html">Subtitution Rot13</a>
+                <a class="dropdown-item" href="Vigenare-Cipher.html">Vigenare Cipher</a>
+                <a class="dropdown-item" href="Affive-Cipher.html">Affive Cipher</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Kirim kritik dan saran</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Lisensi Aktif</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-header hasil">Hasil :</div>
+            <div class="card-body">
+              <form id="cek" name="cek" class="cek">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Masukan Plaintext</label>
+                  <input type="text" class="form-control" id="plaintext" name="plaintext" placeholder="JASAKUMEDIA">
+                  <small id="emailHelp" class="form-text text-muted">Kalimat yang akan di enkripsi, gunakan huruf besar</small>
+                </div>
+                <select class="form-control form-control-sm" id="arah" name="arah">
+                  <option value="kanan">Geser Kanan</option>
+                  <option value="kiri">Geser Kiri</option>
+                </select>
+                <small id="emailHelp" class="form-text text-muted">Jika tidak ada perintah geser biarkan saja (kanan)</small>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Jumlah Pergeseran</label>
+                  <input type="text" class="form-control" id="pergeseran" name="pergeseran" placeholder="misal geser 3">
+                  <small id="emailHelp" class="form-text text-muted">Jika tidak ada perintah geser biarkan saja (kosong)</small>
+                </div>
+
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                  <strong>Contoh</strong> disini menggunakan awalan 'ZEBRA' maka huruf berikutnya adalah huruf yg belum digunakan.
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Urutan Ciphertext</label>
+                  <input type="text" class="form-control" id="balikanjad" name="balikanjad" placeholder="ZEBRACDFGHIJKLMNOPQSTUVWXY">
+                  <small id="emailHelp" class="form-text text-muted">Urutan abjad yang akan digunakan untuk mengenkripsi, gunakan huruf besar</small>
+                </div>
+                
+                <button type="submit" class="btn btn-primary col-lg-12">Reset Ulang</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3"></div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+
+    setInterval(function(){
+
+      var urutanabjad = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      //var balikanjad =  'ZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBA';
+      var output='';
+
+      const plaintext = document.querySelector('#plaintext').value;
+      console.log(plaintext);
+      const arah = document.querySelector('#arah').value;
+      console.log(arah);
+      var pergeseran = document.querySelector('#pergeseran').value;
+      pergeseran=pergeseran/1;
+      console.log(pergeseran);
+      var balikanjad = document.querySelector('#balikanjad').value;
+      balikanjad=balikanjad+balikanjad;
+      console.log(balikanjad);
+
+      //ULANGI SESUAI BANYAK NILAI YG MASUK;
+      for(var i=0;i<plaintext.length;i++){
+        //mengetahui huruf apa di index tertentu;
+        //misal dalam variabel plaintext di index ke(i) adalah huruf 'w';
+        var huruf=plaintext.charAt(i);//w
+        //setelah mengetahui suatu huruf di index tertentu,
+        //cari dalam variabel urutanabjad urutan berapa huruf itu misal 'w';
+        var urutanabjadd=urutanabjad.indexOf(huruf);//23
+          //================================================
+            //logika;
+            if(arah=='kanan'){
+              
+              urutanabjadd=urutanabjadd+pergeseran;
+              console.log(urutanabjadd);
+            }
+            if(arah=='kiri'){
+              
+              urutanabjadd=26+(urutanabjadd-pergeseran);
+              console.log(urutanabjadd);
+            }
+          //================================================
+        //setelah mengetahui nomer urut suatu huruf dalam variabel urutanabjad;
+        //lalu cari urutan yg didapat akan diubah ke huruf apa? balikanjad;
+        //contoh huruf "w" menjadi "d", dengan mencari sesuai index urutanabjad yg didapat;
+        var balikanjadd=balikanjad.charAt(urutanabjadd);//d
+
+        //setelah selesai push ke variabel output;
+        output=output+balikanjadd;
+        console.log(output);
+      }
+
+      var hasil = document.querySelector('.hasil').innerHTML='Hasil : '+output; 
+
+    },100);
+    
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+</html>
