@@ -1,6 +1,6 @@
 # Cipher-Substitusi-Besic-CyberSecurity
 Cipher substitusi (Substitution cipher) adalah jenis kriptografi dengan menerapkan rumus subtitusi yaitu mengganti sebuah text menjadi kalimat tertentu pada ciphertext nya.
-
+``` html
 1.sebagai gambaran 0:
       var dekripsi  = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
       var enkripsi  = 'ZEBRACDFGHIJKLMNOPQSTUVWXY';
@@ -21,7 +21,9 @@ Cipher substitusi (Substitution cipher) adalah jenis kriptografi dengan menerapk
       
 Perlu di ingat, biasanya pada saat di implementasikan sangat jarang menggunakan pergeseran baik kiri atau kanan.
 dan biasanya pergeseran tetap dengan nilai 0.
+```
       
       
+# Support
 Follow my instagram : https://www.instagram.com/wahyu_illahi07/ 
 Youtube Channel : https://www.youtube.com/playlist?list=PL2DC6n3PrEKVXN9nvzONe9idXa9BgCusj
